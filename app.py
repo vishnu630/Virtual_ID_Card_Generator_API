@@ -11,7 +11,7 @@ def convert_card_to_pdf():
 
     # Render the HTML template with the dynamic data using Flask's render_template function
     html = render_template('card.html', name=name, dob=dob)
-    config = pdfkit.configuration(wkhtmltopdf='wkhtmltopdf.exe')
+    config = pdfkit.configuration()
     # Set up the PDF options
     options = {
         "page-size": "A5",
