@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+.id-card {
+  width: 400px;
+  margin: 0 auto;
+  background: #ECF2FF;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.details {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.details h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.details p:last-child {
+  margin-bottom: 0;
+}
+
+
+.qr-code {
+  margin-top: 20px;
+}
+
+.qr-code img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+</style>
+<body>
+<div class="id-card">
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/NBKRIST_logo.png" alt="college logo">
+    <h1>Inforium</h1>
+  </div>
+  <div class="photo">
+    <img src="https://www.pngitem.com/pimgs/m/111-1114839_circle-people-icon-flat-png-avatar-icon-transparent.png" alt="person photo">
+  </div>
+  <div class="details">
+    <h2>{{ name }}</h2>
+    <p>{{ dob }}</p>
+    <p>{{ department }}</p>
+    <p>{{ College_name }}</p>
+    <div class="qr-code">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ name }}" alt="QR Code">
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
